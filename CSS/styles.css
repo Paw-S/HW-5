@@ -47,6 +47,12 @@ body {
   color: var(--white);
   background-color: var(--accent);
 }
+
+.button.hover {
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .button.hover:hover,
 .button.hover:focus {
   color: var(--white);
@@ -131,6 +137,10 @@ header::before {
   letter-spacing: 0.02em;
 
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list.flex .item {
   margin-right: 50px;
@@ -174,6 +184,10 @@ header::before {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-auth .item {
   margin-right: 50px;
@@ -192,6 +206,10 @@ header::before {
 }
 .site-auth .icon {
   margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-auth .link:hover .icon {
   fill: var(--accent);
@@ -457,6 +475,10 @@ header::before {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list.team-flex .link:hover {
   background-color: var(--accent);
@@ -466,6 +488,12 @@ header::before {
   width: 20px;
   height: 20px;
   fill: var(--icon-fill);
+
+  /* тут тупить */
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list.team-flex .link:hover .icon {
   fill: var(--white);
@@ -495,12 +523,22 @@ header::before {
   border: 1px solid var(--icon-fill);
   box-sizing: border-box;
   border-radius: 4px;
-}
-.comp-icom {
-  fill: var(--icon-fill);
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comp-box:hover {
   border: 1px solid var(--accent);
+}
+.comp-icom {
+  fill: var(--icon-fill);
+
+  /* тут тупить */
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .comp-box:hover .comp-icom {
   fill: var(--accent);
@@ -601,15 +639,19 @@ header::before {
 }
 .example-position {
   position: relative;
+  overflow: hidden;
 }
 .example-bcg {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-  margin: 0;
-  padding: 0;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.examples .item:hover .example-bcg {
+  transform: translateY(-100%);
 }
 .example-bcg-text {
   color: var(--white);
@@ -624,10 +666,6 @@ header::before {
   line-height: 1.56;
   margin: 0;
   padding: 0;
-}
-.examples .item:hover .example-bcg {
-  opacity: 1;
-  top: 0;
 }
 
 .example-description {
@@ -662,6 +700,10 @@ header::before {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list.examples .item:hover {
