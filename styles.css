@@ -75,10 +75,10 @@ body {
   margin-top: 0px;
   margin-bottom: 50px;
 }
-.section__bgc-grey {
+.section__bgc--grey {
   background-color: var(--additional-bgc);
 }
-.section__bgc-footer {
+.section__bgc--footer {
   background-color: var(--footer-bgc);
 }
 /*logo*/

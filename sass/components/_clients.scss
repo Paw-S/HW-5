@@ -1,0 +1,49 @@
+/*regular clients*/
+
+.clients {
+  padding-top: 94px;
+
+  &--flex {
+    display: flex;
+  }
+}
+
+.company {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.company__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $-icon-fill;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border: 1px solid $-accent;
+  }
+}
+.company__icon {
+  fill: $-icon-fill;
+
+  /* тут тупить */
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .company__box:hover & {
+    fill: $-accent;
+  }
+}
