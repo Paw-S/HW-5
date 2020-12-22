@@ -1,14 +1,24 @@
 /*why us*/
 
 .strengths__list {
-  display: flex;
-  padding-top: 94px;
-}
-.strengths__item {
-  margin-right: 30px;
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding-top: 94px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
 
-  &:last-child {
-    margin-right: 0px;
+    .strengths__item:last-child {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -18,10 +28,13 @@
   line-height: 1.14;
   text-transform: uppercase;
 
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
   &::before {
     display: block;
     content: "";
-    width: 270px;
     height: 120px;
     border-radius: 4px;
     margin-bottom: 30px;
@@ -31,8 +44,6 @@
   }
 }
 .strengths__text {
-  width: 270px;
-  height: 75px;
   font-size: 14px;
   line-height: 1.7;
   margin-top: 0px;

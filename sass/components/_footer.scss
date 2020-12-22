@@ -1,11 +1,30 @@
 /*footer*/
 
 .footer {
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
   padding-top: 60px;
   padding-bottom: 60px;
   &--flex {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: 480px) {
+      justify-content: center;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }
 
@@ -21,6 +40,9 @@
 
   &--placeholder {
     min-width: 270px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 }
 .footer__adress__contacts {
@@ -51,12 +73,27 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $-white;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 60px;
+    }
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 }
 
 .footer__form {
   margin-left: 100px;
   display: flex;
+  @media screen and (max-width: 768px) {
+    margin: 60px 0px 0px 0px;
+    justify-items: center;
+  }
+  @media screen and (max-width: 1199px) {
+    margin: 60px 0px 0px 0px;
+    text-align: center;
+  }
 }
 
 .footer__form__title {
@@ -68,6 +105,10 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: $-white;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 .footer__form__email {
   width: 358px;
@@ -80,18 +121,4 @@
   background-color: $-footer-bgc;
   text-indent: 12px;
   color: $-white;
-}
-.footer__form__button {
-  font-weight: 700;
-  padding: 10px 32px;
-  width: 200px;
-  height: 50px;
-  margin-left: 15px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
 }
