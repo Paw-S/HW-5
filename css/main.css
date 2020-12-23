@@ -208,11 +208,11 @@ header {
   background-color: transparent;
 }
 
-.header__button--cross {
+.header__button--menu {
   display: none;
 }
 
-.header__button--menu {
+.header__button--cross {
   display: block;
 }
 
@@ -222,12 +222,38 @@ header {
   }
 }
 
-.menu--open .header__button--cross {
+.menu--open .header__button--menu {
   display: block;
 }
 
-.menu--open .header__button--menu {
+.menu--open .header__button--cross {
   display: none;
+}
+
+.header__menu {
+  background-color: #ffffff;
+}
+
+.header__menu.menu--open {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -328,6 +354,7 @@ header {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 21px;
     margin-left: 84px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -337,7 +364,8 @@ header {
 
 @media screen and (min-width: 1200px) {
   .site-auth {
-    margin-left: auto;
+    margin-left: 320px;
+    margin-top: 0px;
   }
 }
 
@@ -364,7 +392,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .site-auth__item:last-child {
-    padding-top: 10px;
+    padding-top: 0px;
     padding-right: 30px;
     padding-bottom: 0px;
   }
@@ -373,6 +401,7 @@ header {
 @media screen and (min-width: 1200px) {
   .site-auth__item:last-child {
     padding-top: 0px;
+    padding-right: 0px;
   }
 }
 
